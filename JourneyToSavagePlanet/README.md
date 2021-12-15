@@ -1233,7 +1233,7 @@ I hope you enjoyed this quick intro into hacking windows applications using a vi
 I encourage you to try to expand the hack to include different things such as increasing the speed of enemies, stopping loss of health or stamina, or other fun things you could find. Below I have added the finished code that you should have by the end of the post if you updated all aspects. This code includes a GUI with an unlimited jumps hack, a speed multiplier hack, and an unlimited ammo hack.
 
 <details>
-<summary>Finalized code</summary>
+<summary>Finalized code (click to expand)</summary>
 
 ```c++
 // dllmain.cpp : Defines the entry point for the DLL application.
