@@ -5,9 +5,11 @@ This blog post will use the singleplayer game, Journey to the Savage Planet, in 
 
 Journey to the Savage Planet is built using the unreal game engine, however this post will not go into detail about how to bypass or reverse the unreal game engine, instead it will focus on techniques that can be used for any windows applications. The reason the game was chosen was because it was provided for free to people with amazon prime, it does not have its symbols stripped so we can focus on techniques, and finally because it has an open world which means we can make some pretty cool hacks for it.
 
+This post will start by going over cheat engine and how to use it, it will then go into how to change program data programmatically. This will involve dll injection and function hooking. After that, the post will finish up with writing a GUI for the hack and doing signature scanning.
+
 # Poking at the game with cheat engine
 
-Once I check out the game a bit and figure out what things I might want to edit I then start poking at the game with cheat engine. Since the game is built by unreal engine I most likely will not have much luck finding "good" pointers just by using cheat engine because of how the engine works. But that won't stop us from trying.
+Once I check out the game a bit and figure out what things I might want to edit I then start poking at the game with cheat engine. Since the game is built by unreal engine I most likely will not have much luck finding "good" pointers just by using cheat engine because of how the engine works. But that won't stop us from trying. We want to find pointers so that we can find values we want to edit each time the game restarts.
 
 When approaching a new game with cheat engine I always start off by trying to find some value that is easily editable (preferably decrementing and incrementing) and one where we know the actual value so that we don't have to do any guessing. Because of this I chose to start by messing with the ammo value.
 
@@ -54,7 +56,7 @@ After restarting the game I can see that several of the pointers I found were su
 
 ## Finding the ammo assembly
 
-Now that we found the ammo pointer we can actually do the correct approach for natively approaching the unreal game engine. We are going to right click on one of the pointers we found, press fine what writes to this address, click yes to attach debugger, and then click find what writes the address pointed at by this pointer.
+Now that we found the ammo pointer we can actually do the correct approach for natively approaching the unreal game engine. We are going to right click on one of the pointers we found, press find what writes to this address, click yes to attach debugger, and then click find what writes the address pointed at by this pointer.
 
 Once the debugger was attached I then shot my gun 10 times and let it reload, at this point I saw the following:
 
