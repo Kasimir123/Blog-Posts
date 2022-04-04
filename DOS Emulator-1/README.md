@@ -4,7 +4,7 @@ I started this project in order to try and get a better understanding of the MS 
 
 This blog post is part 1 of 3 in a series where I will discuss how the emulator works and how I ported c++ to webassembly to allow the emulator to run on the web. Part 2 will discuss the optimizations I had to perform due to compilation issues with emscripten and how I had to write a patcher for the emscripten output. And part 3 will go into depth about the DOS internals that I learned about for this project.
 
-You can try out the emulator [here](../../examples/DOS%20Emulator/)
+You can try out the emulator [here](../examples/DOS%20Emulator/)
 
 # The Emulator
 
